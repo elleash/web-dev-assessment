@@ -1,0 +1,480 @@
+/* imported for custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+/* styling for the entire website */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* body styling */
+body{
+    background-image: linear-gradient(to bottom,#ffe083, #F2994A);
+    background-size: cover;   
+    animation: trans 0.85s
+}
+/* animation for smooth loading */
+@keyframes trans {
+    from{
+        opacity: 0;
+        transform: translate(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+/* styling the navbar */
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 1%;
+}
+/* styling the logo */
+.logo{
+    width: 150px;
+    font-family: 'Rubik', sans-serif;
+    transition: ease 1s;
+    user-select: none;
+}
+/* when on hover, the logo will shine */
+.logo:hover{
+    background: linear-gradient(90deg, black, rgb(49, 49, 49), rgb(65, 65, 65), rgb(107, 107, 107), 
+    rgb(139, 139, 139), #c7c7c7, #fff,rgb(49, 49, 49), black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 100%;
+    color: transparent;
+    animation: shine 3s linear infinite;
+}
+/* animation keyframes for the shine effect */
+@keyframes shine{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 400px 0px;
+    }
+}
+/* styling of the nav so it appears on the right side of the bar */
+nav{
+    flex: 1;
+    text-align: right;
+}
+/* styling the nav links and the spaces between them*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 62px;
+    position: relative;
+    z-index: 2;
+}
+/* styling the links so it looks like a text */
+nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+/* this code is for the navigation effect in which a border will appear when on hover */
+nav ul li::after{
+    content:'';
+    background: #e0b035;
+    padding: 20px 53px;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, opacity 0.5s;
+    opacity: 0;
+    z-index: -1;
+}
+/* when hovered, the border appears */
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+/* styling for the title of the page */
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 100px;
+    
+    font-size: 35px;
+    font-family: 'Rubik',sans-serif;    
+    letter-spacing: 12px;  
+}
+/* about me title */
+.aboutme{
+    position: relative;
+}
+/* in dark mode, the title will change color */
+.dark .aboutme{
+    position: relative;
+    animation: neon 2s linear forwards;
+}
+/* animation of the dark mode title */
+@keyframes neon {
+    0%, 10%, 30%{
+        color: rgb(0, 0, 0);
+        box-shadow: none;
+    } 
+   20%,40%, 40.5%,100%{
+        color: rgb(255, 255, 255);
+        text-shadow: 
+        0 0 10px rgb(203, 244, 250),
+        0 0 20px rgb(203, 244, 250),
+        0 0 40px rgb(203, 244, 250),
+        0 0 80px rgb(203, 244, 250),
+        0 0 160px rgb(203, 244, 250);
+    }
+}
+/* styling of my introduction */
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 20%;
+
+    margin-left: 18%;
+}
+/* styling the image */
+.image img{
+    width: 85%;
+}
+.image{
+    /* using flex-basis to set the size of the image */
+    flex-basis: 80%;
+}
+/* styling of the description */
+.desc{
+    display: flex;
+    flex-direction: column;
+    /* using column so that the texts line uo in a column*/
+}
+/* heading styling */
+.h1{
+    font-size: 35px;
+    font-family: 'Rubik',sans-serif;
+    line-height: 100px;
+}
+/* paragraph styling */
+.p1{
+    font-family: 'Quicksand','Times New Roman', Times, serif;
+    font-size: 17px;
+    width: 60%; 
+}
+/* styling the hobby title */
+.title2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: -10%;
+    
+    font-size: 2em;
+    font-family: 'Rubik',sans-serif;
+}
+/* styling of the paragraph */
+ .p2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 30px;
+
+    font-family: 'Quicksand','Times New Roman', Times, serif;
+    font-size: 17px;
+ }
+/* this line of code is to style the cards */
+ .hobby{
+    content: "";
+    clear: both;
+    /* i use display table so that the cards would fall next to each other */
+    display: table;
+    margin-bottom: 100px;
+}
+/* styling of the first card */
+ .card1{
+    position: relative;  
+    width: 250px;
+    height: 380px;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 211, 174, 0.699);
+    /* to hide the contents of the card until hovered on */
+    overflow: hidden;
+
+    float: left;
+    margin-left: 130px;
+    margin-top: 70px;
+}
+/* styling the image */
+.img1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+/* styling the contents of the cards */
+.content1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    right: 0;
+    
+    /* when on hover, the contents will appear and the image would blur. the contents will then be shown */
+    background: rgba(240, 145, 81, 0.13);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    transition: 1s;
+}
+/* on hover, the contents will rise */
+.card1:hover .content1{
+    top: 0;
+}
+/* styling of the header */
+.one{
+    font-size: 29px;
+    font-weight: 500;
+    font-family: 'Rubik',sans-serif;
+}
+.p3{
+    font-size: 13px;
+    font-family: 'Quicksand','Times New Roman', Times, serif;
+    margin-top: 2%;
+}
+/* styling of the video button*/
+.vid{
+    background: rgb(250, 190, 112);
+    border-radius: 15px;
+    border: none;
+    padding: 12px;
+    margin-top: 30px;
+    width: 100%;
+}
+/* styling the video link */
+.vid2{
+    text-decoration: none;
+    font-family: 'Rubik', 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #000000;
+}
+/* card2 styling */
+.card2{
+    position: relative;  
+    width: 250px;
+    height: 380px;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 211, 174, 0.699);
+    overflow: hidden;
+
+    float: left;
+    margin-left: 170px;
+    margin-top: 70px;
+}
+/* on hover, the contents will rise */
+.card2:hover .content1{
+    top: 0;
+}
+/* styling the spotify button and link */
+.spotify{
+    background: rgb(250, 190, 112);
+    border-radius: 15px;
+    border: none;
+    padding: 12px;
+    margin-top: 30px;
+    width: 100%;
+}
+/* styling of the link text */
+.spot2{
+    text-decoration: none;
+    font-family: 'Rubik', 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #000000;
+}
+/* styling the third card */
+.card3{
+    position: relative;  
+    width: 250px;
+    height: 380px;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 210, 174, 0.699);
+    overflow: hidden;
+
+    float: left;
+    margin-left: 170px;
+    margin-top: 70px;
+}
+/* on hover, the contents will rise */
+.card3:hover .content1{
+    top: 0;
+}
+/* styling the game button */
+.lis{
+    background: rgb(250, 190, 112);
+    border-radius: 15px;
+    border: none;
+    padding: 12px;
+    margin-top: 30px;
+    width: 100%;
+}
+/* styling the link text */
+.lis2{
+    text-decoration: none;
+    font-family: 'Rubik', 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #000000;
+}
+/* the reveal code styles the javascript */
+.reveal{
+    position: relative;
+    /* lifts up the cards */
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+/* activates the javascript code */
+.reveal.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+/* footer styling */
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+/* takes away the styling of the lists */
+.socmed{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    list-style: none;
+    margin-left: -5%;
+}
+/* styling the list */
+.socmed li{
+    margin: 30px;
+    padding-top: 10px ;
+    font-size: 30px;
+}
+/* styling the icons */
+.socmed i{
+    color: #000000;
+    text-decoration: none;
+    transition: .3s
+}
+/* on hover, the social medias will lift */
+.socmed a:hover i{
+    /* lifts the images */
+    transform: translate(0, -10px);
+}
+/* button styling */
+.button{
+    display: block;
+    margin: auto;
+    margin-top: 21px;
+    width: 18%;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    padding: 20px;
+    padding-bottom: 48px;
+
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+
+    text-decoration: none;
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+}
+/* lines of the button that appear on hover */
+.button:after, .button:before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+/* styling of different lines */
+.button:after{
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid #77fafa;
+    border-right: 4px solid #b88b24;
+}
+.button:before{
+    top: 0;
+    left: 0;
+    border-top: 4px solid #b88b24;
+    border-left: 4px solid #77fafa;
+}
+/* on hover, the lines will form a rectangle and look like a button */
+.button:hover:after, .button:hover::before{
+    transition: 0.9s, opacity 0.2s ;
+    opacity: 1;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
+/* dark mode styling */
+.dark{
+    background: linear-gradient(#141e30 ,#243b55);
+    color: white;
+    transition: 1s;
+}
+/* image styling */
+#toggle{
+    width: 35px;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.dark nav ul li a{
+    color: white;
+    transition: 1s;
+}
+.dark .box{
+    color: white;
+    transition: 1s;
+}
+.dark h3{
+    color: white;
+    transition: 1s;
+}
+.dark .socmed i{
+    color: white;
+    transition: 1s;
+}
+.dark .button{
+    color: white;
+    transition: 1s;
+}
+.dark nav ul li::after{
+    background: #357fe0;
+}

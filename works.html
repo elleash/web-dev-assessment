@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="styleworks.css">
+    <script src="https://kit.fontawesome.com/16fe8e1872.js" crossorigin="anonymous"></script>
+    <script src="toggle.js"></script>
+</head>
+<!-- loads dark theme immediately -->
+<body onload="onload()"> 
+    <!-- navigation bar section -->
+    <div class = "navbar">
+        <!-- separate logo section -->
+        <div class = "logo">    
+            <h1>FOCUS</h1>
+            </div>
+        <!-- nav tag for the navigation -->
+        <nav>
+            <ul>
+                <!-- lists to keep the nav links ordered -->
+                <li><a href = "main.html">Home</a></li>
+                <li><a href = "aboutme.html">About</a></li>
+                <li><a href = "Education">Education</a></li>
+                <li><a href = "skills.html">Skills</a></li>
+                <li><a href = "works.html">Works</a></li>
+                 <!-- onclick tag to link the image to the dark mode javascript -->
+                <img onclick="myFunction()" src="moonsun.png" id = "toggle"></i>
+            </ul>
+        </nav> 
+    </div>
+    <!-- works section -->
+    <div class="works">
+        <!-- separate section for the title -->
+        <div class="wtitle">
+            <h2>WORKS GALLERY</h2>
+        </div>
+        <!-- container section containing the works -->
+        <div class="container">
+            <!-- links for the works that are available -->
+            <a href="https://ellysha-grace.itch.io/the-witchs-tower" class = "box">
+                <!-- using video to show preview of my works -->
+                <video src="Bitsy.mp4" loop autoplay muted></video>
+            </a>
+
+            <a href="https://ellysha-grace.itch.io/little-red" class = "box">
+                <video src="twine.mp4" loop autoplay muted></video>
+            </a>
+            <!-- using div instead of links so that it only shows the video -->
+            <div class = "box">
+                <video src="Vending Machine Demo (1).mp4" loop autoplay muted></video>
+            </div>
+
+            <div class = "box">
+                <video src="csharp.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class = "box">
+                <video src="storyboard.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class = "box">
+                <video src="Stop motion.mp4" loop autoplay muted></video>
+            </div>
+        </div>
+    </div>
+    <!-- button to return home -->
+    <a class = "button"
+        href = "main.html"> Return Home  →</a>
+    <!-- footer section -->
+    <div class = "footer">
+        <div class = "contacts">
+            <!--same with the navigation bar, the social media buttons are in a list-->
+            <ul class = "socmed">
+                <li><a href= "https://github.com/elleash"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href= "https://www.instagram.com/pluto_bumbong/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href= "https://www.linkedin.com/in/ellysha-grace-cantiga-441097278/"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>  
+</body>
+</html>

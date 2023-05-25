@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/16fe8e1872.js" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href = "stylemain.css">
+    <script src="toggle.js"></script>
+    <title>Main</title>
+</head>
+
+<!-- to load the dark mode on load -->
+<body onload="onload()">
+      <!-- a div to section the navbar -->
+    <div class = "navbar">
+        <!-- a section for the logo -->
+        <div class = "logo">    
+            <h1>FOCUS</h1>
+        </div>
+        <!-- nav tag for the navigation links -->
+        <nav>
+            <!-- the use of lists organizes the navigation links -->
+            <ul>
+                <li><a href = "main.html">Home</a></li>
+                <li><a href = "aboutme.html">About</a></li>
+                <li><a href = "skills.html">Skills</a></li>
+                <li><a href = "Education">Education</a></li>
+                <li><a href = "works.html">Works</a></li>
+                <img onclick="myFunction()" src="moonsun.png" id = "toggle"></img>
+                <!-- for the darkmode toggle, the image tag was placed alongside the links so the toggle is beside the links -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- image of me -->
+    <img src = "mememme.png"
+        alt = "Painting of Ellysha">
+        
+    <!-- a div for the body of the main page -->
+    <div class = "title_box">
+        <h1>FOCUS</h1>
+        <p>Ellysha Grace S. Cantiga Portfolio</p>
+        <div class = "footer"> <!--a div for the footer of the page-->
+            <div class = "contacts">
+                <ul class = "socmed"> <!--same with the navigation bar, the social media buttons are in a list-->
+                    <li><a href= "https://github.com/elleash"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href= "https://www.instagram.com/pluto_bumbong/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href= "https://www.linkedin.com/in/ellysha-grace-cantiga-441097278/"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <a 
+        class = "button"
+        href = "aboutme.html">Know More →</a> <!--a button with the link of the next page-->
+    </div>
+
+</body>
+</html>
+
+

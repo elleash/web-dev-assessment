@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/16fe8e1872.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styleabout.css">
+    <script src="reveal.js"></script>
+    <script src ="toggle.js"></script>
+    <title>About Me</title>
+</head>
+<!-- to load the dark mode on load -->
+<body onload="onload()">
+
+    <!-- nav bar div to separate header from body -->
+    <div class = "navbar">
+         <!-- a section for the logo -->
+        <div class = "logo">    
+            <h1>FOCUS</h1>
+            </div>
+        <!-- nav tag for the navigation links -->
+        <nav>
+             <!-- the use of lists organizes the navigation links -->
+            <ul>
+                <li><a href = "main.html">Home</a></li>
+                <li><a href = "aboutme.html">About</a></li>
+                <li><a href = "education.html">Education</a></li>
+                <li><a href = "skills.html">Skills</a></li>
+                <li><a href = "works.html">Works</a></li>
+                <img onclick="myFunction()" src="moonsun.png" id = "toggle"></i>
+                 <!-- for the darkmode toggle, the image tag was placed alongside the links so the toggle is beside the links -->
+            </ul>
+        </nav>
+    </div>
+    <!-- separated title -->
+    <div class = "title">
+        <h1 class = "aboutme">ABOUT ME</h1>
+    </div>
+    <!-- article for the about me -->
+    <article class = "intro">
+        <div class = "image reveal"> <!--'reveal' class for javascript-->
+            <img src = "nwjnsme-removebg-preview.png"
+            alt = "Ellyha with a blue color filter.">
+        </div>
+        <!-- about me description -->
+        <div class="desc">
+            <h2 class = 'h1'>Hi I'm Ellysha!</h2>
+            <div class = "p1">
+                <p>I'm a 17 year old Filipino Creative Computing student learning in BathSpa University centered in the UAE. 
+                    <br><br>Being pretty young as a university student, I take advantage of my youth to learn lots of things that interest me such as art, computing, design, and so much more.
+                </p>
+                <!-- footer inside the article so it places below description of myself -->
+                <div class = "footer">
+                    <div class = "contacts">
+                        <!--same with the navigation bar, the social media buttons are in a list-->
+                        <ul class = "socmed">
+                            <li><a href= "https://github.com/elleash"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href= "https://www.instagram.com/pluto_bumbong/"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href= "https://www.linkedin.com/in/ellysha-grace-cantiga-441097278/"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- second title -->
+    <div class="title2">
+        <h2 class = "hobbyheader">HOBBIES</h2>
+    </div>
+    <!-- div for the paragraph section -->
+    <div class = 'p2'>
+        <p>I find many things interesting and therefore making hobbies off of them. However, my attention span makes it hard to stick to a hobby
+            <br> so here are some that I stick with!</p>
+    </div>
+    <!-- an article for the hobby section of the page -->
+    <article class="hobby">
+        <!-- a div for the first card. reveal class for the javascript reveal -->
+        <div class="card1 reveal">
+            <img class = 'img1'
+             src = 'https://i.pinimg.com/564x/8c/ce/aa/8cceaa8143cb3438d2345682b1a2d016--badminton.jpg'>
+             <!-- the first cards content -->
+             <div class= "content1"> 
+                <h3 class = "one">Badminton</h3>
+                <p class = "p3">Balancing my work and extracurricular activities is very important therefore I take on the sport Badminton to keep me healthy and improve my mental state. </p>
+                <!-- button for the card contents -->
+                <button class = 'vid'><a class = "vid2" href = "https://www.youtube.com/watch?v=tAS7rOKtpgQ&ab_channel=Mr.Animate">Learn About Badminton</a></button>
+             </div>  
+        </div>
+        <!-- second card -->
+        <div class="card2 reveal">
+            <img class = 'img1'
+             src = 'https://pbs.twimg.com/media/FBxKXA6WQAEGJf8.jpg'>
+             <div class= "content1"> 
+                <h3 class = "one">Music</h3>
+                <p class = "p3">While I'm absolutely no good at making music, playing an instrument and singing is a hobby of mine.
+                    <br><br> I think music itself is a form of therapy and being able to sing/play songs really helps lift my mood.</p>
+                <button class = 'spotify'><a class = 'spot2' href = "https://open.spotify.com/user/juhk9e96nm9xk2ss7iidl72rr?si=16f331bde936455e"
+                class = 'spotify'>My Playlists</a></button>
+             </div>  
+        </div>
+        <!-- third card -->
+        <div class="card3 reveal">
+            <img class = 'img1'
+             src = 'https://e1.pxfuel.com/desktop-wallpaper/228/751/desktop-wallpaper-best-50-gaming-hq-purple-and-blue-gaming-aesthetic.jpg'>
+             <div class= "content1"> 
+                <h3 class = "one">Video Games</h3>
+                <p class = "p3">Playing video games is probably a very common hobby and it sure is mine!
+                    <br><br> However because I am a Creative Computing student, I take some time to analyze and appreciate the development of the game I'm playing. </p>
+                <button class = 'lis'><a class = 'lis2' href = "https://lifeisstrange.square-enix-games.com/en-gb/games/life-is-strange-remastered-collection/"
+                class = 'lis'>A Game I Love</a></button>
+             </div>  
+        </div>
+
+        </div>
+    </article>
+    <!-- button for the next page -->
+    <a 
+        class = "button"
+        href = "education.html"> My Education  →
+    </a>
+</body>
+</html>

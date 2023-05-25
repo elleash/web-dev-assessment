@@ -1,0 +1,346 @@
+/* added for custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+/* styling the website */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* styling of the body */
+body{
+    background-image: linear-gradient(to bottom,#ffe083, #F2994A);
+    background-size: cover;   
+    animation: trans 0.85s
+}
+/* animation for a smooth loadng of the body */
+@keyframes trans {
+    from{
+        opacity: 0;
+        transform: translate(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+/* styling of the navbar */
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 1%;
+}
+/* styling of the logo */
+.logo{
+    width: 150px;
+    font-family: 'Rubik', sans-serif;
+    transition: ease 1s;
+    user-select: none;
+}
+/* when on hover, the logo will shine */
+.logo:hover{
+    background: linear-gradient(90deg, black, rgb(49, 49, 49), rgb(65, 65, 65), rgb(107, 107, 107), 
+    rgb(139, 139, 139), #c7c7c7, #fff,rgb(49, 49, 49), black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 100%;
+    color: transparent;
+    animation: shine 3s linear infinite; 
+}
+/* animation keyframes for the shine effect */
+@keyframes shine{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 400px 0px;
+    }
+}
+/* styling of the nav so it appears on the right side of the bar */
+nav{
+    flex: 1;
+    text-align: right;
+}
+/* styling the nav links and the spaces between them*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 62px;
+    position: relative;
+    z-index: 2;
+}/* styling the links so it looks like a text */
+nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+/* this code is for the navigation effect in which a border will appear when on hover */
+nav ul li::after{
+    content:'';
+    background: #e0b035;
+    padding: 20px 53px;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, opacity 0.5s;
+    opacity: 0;
+    z-index: -1;
+}
+/* when hovered, the border appears */
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+/* styling of the title */
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 100px;
+    
+    font-size: 35px;
+    font-family: 'Rubik',sans-serif;  
+    letter-spacing: 13px;    
+}
+/* styling of the page's title  */
+.education{
+    position: relative;
+}
+/* dark mode of the title */
+.dark .education{
+    position: relative;
+    animation: neon 2s linear forwards;
+}
+/* animation of the text in darkmode */
+@keyframes neon {
+    0%, 10%,11%, 30%{
+        color: rgb(0, 0, 0);
+        box-shadow: none;
+    } 
+   20%,40%, 40.5%,100%{
+        color: rgb(255, 255, 255);
+        text-shadow: 
+        0 0 10px rgb(203, 244, 250),
+        0 0 20px rgb(203, 244, 250),
+        0 0 40px rgb(203, 244, 250),
+        0 0 80px rgb(203, 244, 250),
+        0 0 160px rgb(203, 244, 250);
+    }
+}
+/* styling of the timeline */
+.container{
+    position: relative;
+    max-width: 1000px;
+    margin: 130px auto;
+}
+/* styling of the cards */
+.school{
+    padding: 30px 50px;
+    position: relative;
+    width: 50%;
+}
+/* dark modes styling of the cards */
+.dark .contents{
+    background: rgb(231, 202, 202);
+}
+/* contents of the cards */
+.contents{
+    position: relative;
+    padding: 10px 50px 30px;
+    width: 100%;
+    background: rgb(202, 214, 231);
+    border-radius: 10px;
+}
+/* in this code, i used nth-child to separate the cards so that the odd cards will stay at the left
+and the even card will go to the right */
+.school:nth-child(odd){
+    left: 0;
+}
+.school:nth-child(even){
+    left: 50%;
+}
+/* this line of code is the line of the timeline */
+.container::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 74%;
+    background: #ffffff;
+    top: 35px;
+    left: 50%;
+    z-index: -1;
+}
+/* styling of the dots on the left side */
+.dot1{
+    position: absolute;
+    top: -10px;
+    height: 0;
+    width: 0;
+    z-index: 1;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    right: -61px;
+}
+/* styling of the dots on the right side */
+.dot2{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    left: -59px;
+}
+/* styling of second heading */
+.contents h2{
+    padding-top: 7px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+}
+/* styling of paragraph */
+.contents p{
+    padding-top: 20px;
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+/* the timeline dates */
+.contents .date{
+    font-size: 13px;
+    font-family: 'Rubik',sans-serif;
+    letter-spacing: 4px;
+    position: absolute;
+    top: -23px;
+}
+/* dark mode styling of the date */
+.dark .date{
+    color: white;
+}
+/* javascript reveal styling */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+/* footer */
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+/* takes away the styling of the lists */
+.socmed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+/* styling the list */
+.socmed li{
+    margin: 30px;
+    padding-top: 10px ;
+    font-size: 30px;
+}
+/* styling the icons */
+.socmed i{
+    color: #000000;
+    text-decoration: none;
+    transition: .3s
+}
+/* on hover, the social medias will lift */
+.socmed a:hover i{
+    transform: translate(0, -10px);
+}
+/* button styling */
+.button{
+    display: block;
+    margin: auto;
+    margin-top: 21px;
+    width: 18%;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    padding: 20px;
+    padding-bottom: 48px;
+
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+
+    text-decoration: none;
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+}
+/* lines of the button that appear on hover */
+.button:after, .button:before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+/* styling of different lines */
+.button:after{
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid #77fafa;
+    border-right: 4px solid #b88b24;
+}
+.button:before{
+    top: 0;
+    left: 0;
+    border-top: 4px solid #b88b24;
+    border-left: 4px solid #77fafa;
+}
+/* on hover, the lines will form a rectangle and look like a button */
+.button:hover:after, .button:hover::before{
+    transition: 0.9s, opacity 0.2s ;
+    opacity: 1;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
+/* dark mode styling */
+.dark{
+    background: linear-gradient(#141e30 ,#243b55);
+    color: white;
+    transition: 1s;
+}
+/* styling the toggle image of dark mode */
+#toggle{
+    width: 35px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.dark nav ul li a{
+    color: white;
+    transition: 1s;
+}
+.dark .container{
+    color: #000000;
+}
+.dark .socmed i{
+    color: white;
+    transition: 1s;
+}
+.dark .button{
+    color: white;
+    transition: 1s;
+}
+.dark nav ul li::after{
+    background: #357fe0;
+}

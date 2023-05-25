@@ -1,0 +1,459 @@
+/* custom fonts imported */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+/* default styling */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* default body styling */
+body{
+    background-image: linear-gradient(to bottom,#ffe083, #F2994A);
+    background-size: cover;   
+    animation: trans 0.85s;
+}
+/* animation for smooth load */
+@keyframes trans {
+    from{
+        opacity: 0;
+        transform: translate(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+/* nav bar styling */
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 1%;
+}
+/* logo styling */
+.logo{
+    width: 150px;
+    font-family: 'Rubik', sans-serif;
+    transition: ease 1s;
+    user-select: none;
+}
+/* shine animation on hover */
+.logo:hover{
+    background: linear-gradient(90deg, black, rgb(49, 49, 49), rgb(65, 65, 65), rgb(107, 107, 107), 
+    rgb(139, 139, 139), #c7c7c7, #fff,rgb(49, 49, 49), black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 100%;
+    color: transparent;
+    animation: shine 3s linear infinite;
+}
+/* animation for shine effect */
+@keyframes shine{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 400px 0px;
+    }
+}
+/* styling of the nav so it appears on the right side of the bar */
+nav{
+    flex: 1;
+    text-align: right;
+}
+/* styling the nav links and the spaces between them*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 62px;
+    position: relative;
+    z-index: 2;
+}
+/* styling the links so it looks like a text */
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    color: #000000;
+}
+/* this code is for the navigation effect in which a border will appear when on hover */
+nav ul li::after{
+    content:'';
+    background: #e0b035;
+    padding: 20px 52px;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, opacity 0.5s;
+    opacity: 0;
+    z-index: -1;
+}
+/* when hovered, the border appears */
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+/* dark mode image styling */
+#toggle{
+    width: 35px;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+/* dark mode styling */
+.dark{
+    background: linear-gradient(#141e30 ,#243b55);
+    color: white;
+    transition: 1s;
+}
+.dark nav ul li a{
+    color: white;
+    transition: 1s;
+}
+.dark .box{
+    color: white;
+    transition: 1s;
+}
+.dark h3{
+    color: white;
+    transition: 1s;
+}
+.dark .socmed i{
+    color: white;
+    transition: 1s;
+}
+.dark .button{
+    color: white;
+    transition: 1s;
+}
+.dark nav ul li::after{
+    background: #357fe0;
+}
+/* main title of the page */
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 100px;
+    
+    font-size: 35px;
+    font-family: 'Rubik',sans-serif; 
+    letter-spacing: 15px;   
+}
+/* dark mode of the title */
+.dark .myskill{
+    position: relative;
+    animation: neon 2s linear forwards;
+}
+/* animation of dark mode title */
+@keyframes neon {
+    0%, 10%,11%, 30%{
+        color: rgb(0, 0, 0);
+        box-shadow: none;
+    } 
+   20%,40%, 40.5%,100%{
+        color: rgb(255, 255, 255);
+        text-shadow: 
+        0 0 10px rgb(203, 244, 250),
+        0 0 20px rgb(203, 244, 250),
+        0 0 40px rgb(203, 244, 250),
+        0 0 80px rgb(203, 244, 250),
+        0 0 160px rgb(203, 244, 250);
+    }
+}
+/* padding of the skills section so it's more compact */
+.skills{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 100px;
+}
+/* styling the contents so they are beside each other */
+.contents{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+/* styling the left side of the skills section */
+.left{
+    font-family: 'Rubik', sans-serif;
+    width: 50%;
+    text-align: left;
+    font-size: 25px;
+}
+/* styling of the left side paragraph */
+.left p{
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+    font-size: 17px;
+    margin: 25px 0;
+}
+/* styling the right side of the skills section */
+.right{
+    flex: 1;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+/* styling the space between bars */
+.bar{
+    margin-bottom: 20px;
+}
+/* styling the information */
+.info{
+    display: flex;
+    align-items: center;
+    /* space-between so theres an equal space between the word and the percent */
+    justify-content: space-between;
+}
+/* styling the bar names and percentage */
+span{
+    font-size: 18px;
+    font-family: 'Rubik',sans-serif;
+}
+/* bar styling */
+.bars{
+    background-color: rgba(236, 236, 236, 0.5) ;
+    height: 10px;
+    width: 100%;
+    border-radius: 99px;
+    position: relative;
+}
+/* styling the bar progress to be shown when entering the side */
+.bars::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-image: linear-gradient(to right,crimson, rgb(226, 95, 95));
+}
+/* dark mode styling of the progress bar color */
+.dark .bars{
+    background-color: rgb(236, 236, 236) ;
+}
+.dark .bars::before{
+    background-image: linear-gradient(to right,rgb(50, 20, 220), rgb(95, 125, 226));
+}
+/* styling the html progress bar percentage */
+.html::before{
+    width: 80%;
+    border-radius: 99px;
+    animation: html 4s;
+}
+/* animation of the progress bar on load */
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+/* styling of css progress bar */
+.css::before{
+    width: 90%;
+    border-radius: 99px;
+    animation: css 4s;
+}
+/* progress bar animation on load */
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+/* styling of js progress bar */
+.js::before{
+    width: 30%;
+    border-radius: 99px;
+    animation: js 4s;
+}
+/* animation of the bar on load */
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+/* styling python bar */
+.python::before{
+    width: 60%;
+    border-radius: 99px;
+    animation: python 4s;
+}
+/* animation of the bar on load */
+@keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+/* styling of csharp bar */
+.csharp::before{
+    width: 40%;
+    border-radius: 99px;
+    animation: csharp 4s;
+}
+/* animation of the bar on load */
+@keyframes csharp{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+/* styling of the second title */
+.h2{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+.container{
+    /* styling the container as a grid to align them in rows and columns */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    /* specifying the size and quantity of the columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* size of the gaps between rows and columns */
+    grid-gap: 50px;
+    text-align: center;
+}
+/* padding of the skills */
+.box{
+    padding: 20px;
+}
+/* styling of the images and heading positions */
+.exp-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+}
+/* styling the img section */
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transition: 1s;
+}
+/* animation of image lifting on hover */
+.img:hover{
+    transform: translateY(-30px);
+}
+/* styling the texts */
+h3{
+    color: #000000;
+    margin: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+/* paragraph styling */
+p{
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+/* further styling of the image */
+.icon{
+    width: 100px;
+    padding-bottom: 40px;
+}
+/* footer styling */
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+/* takes away the styling of the lists */
+.socmed{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    list-style: none;
+    margin-left: -4%;
+    margin-top: -30px;
+}
+/* styling the list */
+.socmed li{
+    margin: 20px;
+    font-size: 25px;
+}
+/* styling the icons */
+.socmed i{
+    color: #000000;
+    text-decoration: none;
+    transition: .3s
+}
+/* lifts the icons */
+.socmed a:hover i{
+    transform: translate(0, -10px);
+}
+/* button styling */
+.button{
+    display: block;
+    margin: auto;
+    margin-top: 21px;
+    width: 18%;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    padding: 20px;
+    padding-bottom: 48px;
+
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+
+    text-decoration: none;
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+}
+/* styling for the lines to appear */
+.button:after, .button:before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+/* styling one part of the lines */
+.button:after{
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid #77fafa;
+    border-right: 4px solid #b88b24;
+}
+/* styling the other part of the lines */
+.button:before{
+    top: 0;
+    left: 0;
+    border-top: 4px solid #b88b24;
+    border-left: 4px solid #77fafa;
+}
+/* animation of button on hover */
+.button:hover:after, .button:hover::before{
+    transition: 0.9s, opacity 0.2s ;
+    opacity: 1;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}

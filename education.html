@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <script src="https://kit.fontawesome.com/16fe8e1872.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styleedu.css">
+    <script src="reveal.js">t</script>
+    <script src = "toggle.js"></script>
+</head>
+<!-- to load the dark mode on load -->
+<body onload="onload()">
+    <!-- div for the navbar-->
+    <div class = "navbar">
+         <!-- a section for the logo -->
+        <div class = "logo">    
+            <h1>FOCUS</h1>
+            </div>
+        <!-- nav tag for the navigation links -->
+        <nav>
+            <!-- the use of lists organizes the navigation links -->
+            <ul>
+                <li><a href = "main.html">Home</a></li>
+                <li><a href = "aboutme.html">About</a></li>
+                <li><a href = "Education">Education</a></li>
+                <li><a href = "skills.html">Skills</a></li>
+                <li><a href = "works.html">Works</a></li>
+                <img onclick="myFunction()" src="moonsun.png" id = "toggle"></i>
+                <!-- for the darkmode toggle, the image tag was placed alongside the links so the toggle is beside the links -->
+            </ul>
+        </nav> 
+    </div>
+    <!-- section for the title -->
+    <div class = "title">
+        <h1 class = "education">MY EDUCATION TIMELINE</h1>
+    </div>
+    <!-- container class is a container to store the educational timeline -->
+    <div class="container">
+        <!-- the div school is the different timelines -->
+        <div class="school reveal">
+            <!-- contents class is the contents of the timeline box -->
+            <div class="contents">
+                <h3 class="date">2012 - 2017</h3>
+                <h2>GLOBAL ENGLISH SCHOOL-AL AIN</h2>
+                <p>I took my elementary years in Global English School.</p>
+                <!-- span tag is used to make the dots -->
+                <span class="dot1"></span>
+            </div>
+        </div>
+        <!-- the second box of the timeline-->
+        <div class="school reveal">
+            <div class="contents">
+                <h3 class="date">2017 - 2018</h3>
+                <h2>Wellspring Christian Family Schools</h2>
+                <p>I decided to take my schools at home and spent my 7th grade in this school.</p>
+                <span class="dot2"></span>
+            </div>
+        </div>
+        <!-- the third box of the timeline -->
+        <div class="school reveal">
+            <div class="contents">
+                <h3 class="date">2018 - 2021</h3>
+                <h2>Homeschool Global Middle East</h2>
+                <p>After my 7th grade, I moved to a different homeschool and did my schooling there up to 10th grade.</p>
+                <span class="dot1"></span>
+            </div>
+        </div>
+        <!-- the fourth box of the timeline -->
+        <div class="school reveal">
+            <div class="contents">
+                <h3 class="date">2021 - PRESENT</h3>
+                <h2>BathSpa University</h2>
+                <p>I am currently on my journey in achieving my Bachelors Degree in Creative Computing at BathSpa University.
+                </p>
+                <span class="dot2"></span>
+            </div>
+        </div>
+    </div>
+    <!-- button for the next page -->
+    <a class = "button"
+        href = "skills.html"> See My Skills  →</a>
+    <!-- footer at the bottom so it appears bellow the button -->
+    <div class = "footer">
+        <div class = "contacts">
+            <!--same with the navigation bar, the social media buttons are in a list-->
+            <ul class = "socmed">
+                <li><a href= "https://github.com/elleash"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href= "https://www.instagram.com/pluto_bumbong/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href= "https://www.linkedin.com/in/ellysha-grace-cantiga-441097278/"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>  
+    
+</body>
+</html>
